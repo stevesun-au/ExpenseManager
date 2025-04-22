@@ -19,10 +19,11 @@ Frontend UI:
 ![Backend](backend1.png)
 
 ### Frontend - Expense List
-![Frontend List](frontend1.png)
+![Frontend Form](frontend2.png)
 
 ### Frontend - Add Expense Form
-![Frontend Form](frontend2.png)
+![Frontend List](frontend1.png)
+
 ---
 
 ## Tech Stack
