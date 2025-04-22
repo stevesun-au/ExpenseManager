@@ -14,15 +14,21 @@ A simple full-stack Expense Management application built using **ASP.NET Core We
   - Assign multiple Categories (multi-select)
 - Basic form validation on frontend and backend
 - Data seeded for quick startup
+
+### Seeded data for DB quick set up
+![Db](db.png)
+
 Frontend UI:
 ### Backend API
 ![Backend](backend1.png)
 
 ### Frontend - Expense List
-![Frontend List](frontend1.png)
+![Frontend Form](frontend2.png)
 
 ### Frontend - Add Expense Form
-![Frontend Form](frontend2.png)
+![Frontend List](frontend1.png)
+
+
 ---
 
 ## Tech Stack
@@ -46,3 +52,8 @@ Frontend UI:
 
 
 ### 🧪 How to Run
+1. Run the server using <span style="color:red">https</span> as follow, not IIS express because I have configured to use https port for Api calls in Angular.
+2. Opent browser go to https://localhost:60888/, then UI will show as above as an expense list.
+### Start the server
+![start](start.png)
+   
