@@ -45,7 +45,7 @@ Frontend UI:
 ### 📦 Prerequisites
 
 - Visual Studio 2022 or newer
-- SQL Server Express (LocalDB also works)
+- SQL Server Express (LocalDB also works), you should have sql express server instance named as localhost/sqlexpress, because connect string has been configured as "Server=localhost\\SQLEXPRESS;Database=ExpenseDb;Trusted_Connection=True;TrustServerCertificate=True;"
 - Node.js V22.14.0 (installed automatically with VS workload)
 - Npm 10.0.0
 - .NET 8 SDK
