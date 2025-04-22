@@ -24,6 +24,8 @@ Frontend UI:
 ### Frontend - Add Expense Form
 ![Frontend List](frontend1.png)
 
+Seeded data for DB quick set up
+![Frontend List](db.png)
 ---
 
 ## Tech Stack
