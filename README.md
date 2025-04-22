@@ -14,7 +14,15 @@ A simple full-stack Expense Management application built using **ASP.NET Core We
   - Assign multiple Categories (multi-select)
 - Basic form validation on frontend and backend
 - Data seeded for quick startup
+Frontend UI:
+### Backend API
+![Backend](backend1.png)
 
+### Frontend - Expense List
+![Frontend List](frontend1.png)
+
+### Frontend - Add Expense Form
+![Frontend Form](frontend2.png)
 ---
 
 ## Tech Stack
