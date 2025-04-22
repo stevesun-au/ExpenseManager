@@ -52,7 +52,7 @@ Frontend UI:
 
 
 ### 🧪 How to Run
-1. Run the server using <span style="color:red">https</span> as follow, not IIS express because I have configured to use https port for Api calls in Angular.
+1. Set the server project as the startup project, Run the server using **https** as follow, don't not use IIS express because I have configured to use https port for Api calls in Angular. This will also call npm to install all packages in Angular client project. You don't need to do anything. :)
 2. Opent browser go to https://localhost:60888/, then UI will show as above as an expense list.
 ### Start the server
 ![start](start.png)
