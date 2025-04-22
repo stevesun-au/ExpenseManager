@@ -11,7 +11,7 @@
     <!-- Amount Column -->
     <ng-container matColumnDef="amount">
       <mat-header-cell *matHeaderCellDef>Amount</mat-header-cell>
-      <mat-cell *matCellDef="let expense" [class.high-amount]="expense.amount > 500">
+      <mat-cell *matCellDef="let expense" [class.high-amount]="expense.amount > 2000">
         {{expense.amount | currency}}
       </mat-cell>
     </ng-container>
