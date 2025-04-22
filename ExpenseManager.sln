@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "expensemanager.client", "expensemanager.client\expensemanager.client.esproj", "{EC63AB3B-6EB2-63AD-D09C-E36FC6C41E11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseManager.Server", "ExpenseManager.Server\ExpenseManager.Server.csproj", "{E71DA044-AD19-40D6-9F69-A1405B1388EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC63AB3B-6EB2-63AD-D09C-E36FC6C41E11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC63AB3B-6EB2-63AD-D09C-E36FC6C41E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC63AB3B-6EB2-63AD-D09C-E36FC6C41E11}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EC63AB3B-6EB2-63AD-D09C-E36FC6C41E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC63AB3B-6EB2-63AD-D09C-E36FC6C41E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC63AB3B-6EB2-63AD-D09C-E36FC6C41E11}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E71DA044-AD19-40D6-9F69-A1405B1388EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E71DA044-AD19-40D6-9F69-A1405B1388EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E71DA044-AD19-40D6-9F69-A1405B1388EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E71DA044-AD19-40D6-9F69-A1405B1388EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B06CA85-5843-4872-B8D8-EE0467D681C4}
+	EndGlobalSection
+EndGlobal

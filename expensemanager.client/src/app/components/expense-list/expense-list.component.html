@@ -1,0 +1,55 @@
+<div class="table-container">
+  <mat-table [dataSource]="expenses" class="mat-elevation-z8">
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+      <mat-cell *matCellDef="let expense" class="description-cell">
+        <strong>{{expense.description}}</strong>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Amount Column -->
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef>Amount</mat-header-cell>
+      <mat-cell *matCellDef="let expense" [class.high-amount]="expense.amount > 500">
+        {{expense.amount | currency}}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Person Column -->
+    <ng-container matColumnDef="person">
+      <mat-header-cell *matHeaderCellDef>Person</mat-header-cell>
+      <mat-cell *matCellDef="let expense" class="person-cell">
+        <mat-icon>person</mat-icon> {{expense.personName}}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+      <mat-cell *matCellDef="let expense">
+        {{expense.date | date:'mediumDate'}}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Categories Column -->
+    <ng-container matColumnDef="categories">
+      <mat-header-cell *matHeaderCellDef>Categories</mat-header-cell>
+      <mat-cell *matCellDef="let expense">
+        <mat-chip-listbox>
+          <mat-chip-option *ngFor="let category of expense.categories"
+                           [style.background]="getCategoryColor(category)"
+                           selected>
+            {{category}}
+          </mat-chip-option>
+        </mat-chip-listbox>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Definitions -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns; let i = index"
+             [class.even-row]="isEven(i)"
+             [class.odd-row]="!isEven(i)"></mat-row>
+  </mat-table>
+</div>

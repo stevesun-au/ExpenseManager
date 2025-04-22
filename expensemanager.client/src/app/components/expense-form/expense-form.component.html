@@ -1,0 +1,85 @@
+<div class="form-container">
+  <h2>Add Expense</h2>
+
+  <form [formGroup]="expenseForm" (ngSubmit)="onSubmit()" class="expense-form">
+
+    <div *ngIf="allErrors" class="error-messages">
+      <pre>{{ allErrors }}</pre>  <!-- Display all errors -->
+    </div>
+
+    <!-- Description -->
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description" required />
+      <mat-error *ngIf="expenseForm.get('description')?.errors?.['required']">
+        Description is required.
+      </mat-error>
+      <mat-error *ngIf="expenseForm.get('description')?.errors?.['serverError']">
+        {{ expenseForm.get('description')?.errors?.['serverError'] }}
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Amount -->
+    <mat-form-field appearance="fill">
+      <mat-label>Amount</mat-label>
+      <mat-icon matPrefix>attach_money</mat-icon>
+      <input matInput type="number" formControlName="amount" min="0.01" step="0.01" required (blur)="formatDecimal('amount')" />
+      <mat-error *ngIf="expenseForm.get('amount')?.errors?.['required']">
+        Amount is required.
+      </mat-error>
+      <mat-error *ngIf="expenseForm.get('amount')?.errors?.['min']">
+        Amount must be at least 0.01.
+      </mat-error>
+      <mat-error *ngIf="expenseForm.get('amount')?.errors?.['serverError']">
+        {{ expenseForm.get('amount')?.errors?.['serverError'] }}
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Person -->
+    <mat-form-field appearance="fill">
+      <mat-label>Person</mat-label>
+      <mat-select formControlName="personId" required [panelClass]="'custom-select-panel'">
+        <mat-option *ngFor="let person of people" [value]="person.id">
+          {{ person.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="expenseForm.get('personId')?.errors?.['required']">
+        Please select a person.
+      </mat-error>
+      <mat-error *ngIf="expenseForm.get('personId')?.errors?.['serverError']">
+        {{ expenseForm.get('personId')?.errors?.['serverError'] }}
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Categories -->
+    <mat-form-field appearance="fill">
+      <mat-label>Categories</mat-label>
+      <mat-select formControlName="categoryIds" multiple required [panelClass]="'custom-select-panel'">
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="expenseForm.get('categoryIds')?.errors?.['required']">
+        Please select at least one category.
+      </mat-error>
+      <mat-error *ngIf="expenseForm.get('categoryIds')?.errors?.['serverError']">
+        {{ expenseForm.get('categoryIds')?.errors?.['serverError'] }}
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Date -->
+    <mat-form-field appearance="fill">
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" (click)="picker.open()" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="expenseForm.get('date')?.errors?.['serverError']">
+        {{ expenseForm.get('date')?.errors?.['serverError'] }}
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">
+      Submit Expense
+    </button>
+  </form>
+</div>

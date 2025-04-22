@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div class="toolbar-content">
+    <h1 class="app-title">Expense Tracker</h1>
+    <nav class="nav-links">
+      <a mat-button routerLink="/" routerLinkActive="active"
+         class="nav-link" matRipple>
+        <mat-icon class="nav-icon">receipt</mat-icon>
+        <span class="nav-label">Expenses</span>
+      </a>
+      <a mat-button routerLink="/add" routerLinkActive="active"
+         class="nav-link" matRipple>
+        <mat-icon class="nav-icon">add_circle</mat-icon>
+        <span class="nav-label">Add Expense</span>
+      </a>
+    </nav>
+  </div>
+</mat-toolbar>
+
+<main class="content-container">
+  <div class="content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</main>

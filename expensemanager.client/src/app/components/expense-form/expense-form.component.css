@@ -1,0 +1,91 @@
+/* Main Form Container */
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Roboto', sans-serif;
+}
+
+  /* Form Title */
+  .form-container h2 {
+    color: #3f51b5;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+
+/* Form Layout */
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Base Form Field Styles */
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.mat-form-field-flex {
+  background-color: #fafafa;
+  border-radius: 4px !important;
+  padding: 0 0.75em !important;
+}
+
+/* Input and Label Styles */
+.mat-input-element {
+  font-size: 16px;
+  color: #333;
+  padding: 8px 0;
+  caret-color: #3f51b5;
+}
+
+.mat-form-field-label {
+  color: #5f6368 !important;
+  font-weight: 500 !important;
+}
+
+/* Focus States */
+.mat-form-field-appearance-fill.mat-focused .mat-form-field-label {
+  color: #3f51b5 !important;
+}
+
+.mat-form-field-appearance-fill.mat-focused .mat-form-field-flex {
+  background-color: rgba(63, 81, 181, 0.04) !important;
+}
+
+
+
+
+.error-messages {
+  background-color: #f8d7da;
+  border-left: 4px solid #f5c6cb;
+  color: #721c24;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.error-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.error-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.error-item {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
